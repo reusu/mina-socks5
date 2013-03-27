@@ -22,7 +22,7 @@ public class Socks5Server {
 
 
         //添加socks5编码解码过滤器
-        acceptor.getFilterChain().addLast("socks5Codec",new ProtocolCodecFilter(new Socks5CodecFactory(encoder)));
+        acceptor.getFilterChain().addLast("socks5Codec",new ProtocolCodecFilter(new Socks5CodecFactory()));
 
         //设置socks5业务处理Handler
         Socks5ServerIoHandler handler=new Socks5ServerIoHandler();

@@ -3,6 +3,9 @@ package org.apache.mina.proxyserver.socks5;
 import org.apache.mina.core.service.IoHandlerAdapter;
 import org.apache.mina.core.session.AttributeKey;
 import org.apache.mina.core.session.IoSession;
+import org.apache.mina.proxyserver.socks5.codec.IdentifierMethod;
+import org.apache.mina.proxyserver.socks5.codec.MessageType;
+import org.apache.mina.proxyserver.socks5.codec.Socks5Message;
 
 /**
  * Created with IntelliJ IDEA.
@@ -45,7 +48,22 @@ public class Socks5ServerIoHandler extends IoHandlerAdapter{
 
     @Override
     public void messageReceived(IoSession session, Object message) throws Exception {
-        super.messageReceived(session, message);    //To change body of overridden methods use File | Settings | File Templates.
+        Socks5Message socks5Message=(Socks5Message)message;
+        if(socks5Message.getMessageType()== MessageType.IdentifierRequest ){
+            IdentifierMethod method=socks5Message.getIdentifierMethod();
+                if(method==IdentifierMethod.NO_AUTHENICATION_REQUIRED){
+                    byte [] data=new byte[]{05,00};
+                    session.write(data);
+                }else if(method==IdentifierMethod.USERNAME_PASSWORD){
+
+                }else if(method==IdentifierMethod.GSSAPI){
+
+                }else if(method==IdentifierMethod.RESERVED_FOR_PRIVATE_METHODS){
+
+                }else {
+
+                }
+        }
     }
 
     /**
