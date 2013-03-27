@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mina-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mina-filter-compression" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mina-http" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mina-integration-beans" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mina-integration-jmx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mina-integration-ognl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mina-integration-xbean" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mina-legal" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mina-socks5" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mina-statemachine" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mina-transport-apr" charset="UTF-8" />
+  </component>
 </project>
 

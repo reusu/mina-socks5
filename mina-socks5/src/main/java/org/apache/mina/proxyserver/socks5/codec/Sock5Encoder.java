@@ -23,6 +23,6 @@ public class Sock5Encoder extends ProtocolEncoderAdapter {
      * @throws Exception if the message violated protocol specification
      */
     public void encode(IoSession session, Object message, ProtocolEncoderOutput out) throws Exception {
-        //To change body of implemented methods use File | Settings | File Templates.
+        System.out.println(message);
     }
 }
